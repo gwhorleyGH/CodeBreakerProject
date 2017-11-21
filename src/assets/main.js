@@ -35,7 +35,7 @@ function setHiddenFields() {
         let howMany = 4 - answerString.length;
         padding = '0'.repeat(howMany)
     }
-    answer = padding.concat(answerString);
+    answer.value = padding.concat(answerString);
     attempt = 0;
 }
 
