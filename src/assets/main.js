@@ -3,11 +3,11 @@ let attempt = document.getElementById('attempt');
 
 function guess() {
     let input = document.getElementById('user-guess');
-    if (answer === '' && attempt === '') {
+    if (answer.value === '' && attempt.value === '') {
         setHiddenFields()
     }
     if (validateInput(input.value)) {
-        attempt++;
+        attempt.value++;
     }
     else if (!validateInput(input.value)) {
         return false
@@ -17,12 +17,12 @@ function guess() {
         showAnswer(true)
         showReplay()
     }
-    else if (!getResults(input) && attempt >= 10) {
+    else if (!getResults(input) && attempt.value >= 10) {
         setMessage('You Lose! :(')
         showAnswer(false)
         showReplay()
     }
-    else if (!getResults(input) && attempt < 10) {
+    else if (!getResults(input) && attempt.value < 10) {
         setMessage('Incorrect, try again.')
     }
 }
