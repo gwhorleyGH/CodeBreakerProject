@@ -17,8 +17,8 @@ function guess() {
 
 //implement new functions here
 function setHiddenFields() {
-    //make answer value exactly 4 characters long
-    let answerString = (Math.floor(Math.random() * (9999))).toString();
+    //set answer variable equal to a randomly generated whole number between 0 and 9999
+    let answerString = Math.floor(Math.random() * 10000);
     let padding = "";
     while (answerString.length < 4) {
         let howMany = 4 - answerString.length;
